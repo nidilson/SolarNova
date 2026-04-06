@@ -24,8 +24,13 @@ body {
   color: var(--text);
 }
 
-h1{
+.logo{
   font-size: x-large;
+  font-weight: bolder;
+}
+
+h1{
+  font-size: xx-large;
   font-weight: bolder;
 }
 
@@ -40,4 +45,108 @@ h3{
 p{
   font-weight: 400;
   font-size: medium;
+}
+/* ACCESIBILIDAD */
+:focus {
+  outline: 3px solid #ff9800;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: black;
+  color: white;
+  padding: 8px;
+}
+
+/* NAVBAR */
+.header {
+  background: white;
+  border-bottom: 1px solid var(--gray);
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+.nav-links li {
+  height: 100%;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover{
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+@media(max-width: 500px){
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav-links li{
+        width: 100%;
+    }
+    .nav a{
+        display: flex;
+        text-align: center;
+        padding: 0.5rem;
+        width: 100%;
+
+    }
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  background: var(--secondary);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--secondary-dark);
+  color: white !important;
+  text-decoration: none !important;
 }
