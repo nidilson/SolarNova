@@ -1,17 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+<html class="light" lang="es"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#8b5000",
+                      "primary-fixed-dim": "#88d982",
+                      "on-error-container": "#93000a",
+                      "on-background": "#191c1b",
+                      "inverse-surface": "#2e3130",
+                      "on-surface-variant": "#40493d",
+                      "tertiary-fixed": "#ffdfa0",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#2e7d32",
+                      "surface-tint": "#1b6d24",
+                      "outline-variant": "#bfcaba",
+                      "tertiary-container": "#8c6800",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#eceeec",
+                      "surface-bright": "#f8faf8",
+                      "secondary-fixed-dim": "#ffb870",
+                      "inverse-on-surface": "#eff1ef",
+                      "on-tertiary-container": "#ffefd7",
+                      "on-primary-container": "#cbffc2",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e1e3e1",
+                      "on-primary-fixed-variant": "#005312",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#693c00",
+                      "outline": "#707a6c",
+                      "on-primary-fixed": "#002204",
+                      "tertiary-fixed-dim": "#f8bd2a",
+                      "surface-variant": "#e1e3e1",
+                      "on-tertiary-fixed": "#261a00",
+                      "surface-container-high": "#e6e9e7",
+                      "on-surface": "#191c1b",
+                      "tertiary": "#6e5100",
+                      "secondary-container": "#ff9800",
+                      "secondary-fixed": "#ffdcbe",
+                      "surface": "#f8faf8",
+                      "primary": "#0d631b",
+                      "surface-container-low": "#f2f4f2",
+                      "on-secondary-container": "#653900",
+                      "inverse-primary": "#88d982",
+                      "on-secondary-fixed": "#2c1600",
+                      "background": "#f8faf8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+      </script>
 </head>
-
-<body>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-xl shadow-sm">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <div class="text-xl font-black text-green-900 dark:text-green-500 font-headline tracking-tight">
+                      SolarNova
+                  </div>
+      <div class="hidden md:flex items-center space-x-8 font-headline tracking-tight font-bold">
+        <a class="text-green-800 dark:text-green-400 border-b-2 border-green-800 dark:border-green-400 pb-1 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">Inicio</a>
+        <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">Servicios</a>
+        <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">Blog educativo</a>
+        <a class="text-zinc-600 dark:text-zinc-400 hover:text-green-700 dark:hover:text-green-300 transition-colors" href="#">Contacto</a>
+      </div>
+      <button class="bg-primary text-on-primary rounded-full px-6 py-2.5 font-bold shadow-sm scale-95 active:scale-90 transition-transform border-t border-white/20">
+                      Get a Quote
+                  </button>
+    </div>
+  </nav>
   <main>
-    <h1>Vanilla JavaScript App</h1>
+  <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img alt="Energía Solar Costa Rica" class="w-full h-full object-cover" data-alt="Modern solar panels on a luxury villa roof overlooking the lush Costa Rican rainforest at golden hour with warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYpgPPyNRdke6okNn3V-lFNgvlvWdjY422RvdyR18qWqiO4yHO9mGO1n02LGplSQ5a1Fvo529AcQus3TKfiJMbfugNc2uCFxOUAWNTQpWo_nUAXu_1GEe56ZtliRTotPS8TPCLZqDXxG4HfoI5A_tAocEu_eH6cS5-dQNQVYY79zO6qAxqBiNDsKs9FUQUZAGWeJLXfDGBNwuzXTxVWXn0eCFYbYSJWoajmXzxu1p2fOUrqcU_a9CwfZBfE2NclwiyndnFsgzIeV8"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Pura Vida, Pura Energía</span>
+          <h1 class="text-6xl md:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tight mb-6">Lleva el Sol a tu Hogar con SolarNova</h1>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">Transformamos la abundancia del sol costarricense en independencia energética. Nuestra misión es liderar la transición hacia un futuro sostenible con tecnología de vanguardia y raíces locales.</p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-primary text-on-primary rounded-full px-8 py-4 font-bold text-lg solar-pulse-gradient shadow-xl hover:shadow-primary/20 transition-all active:scale-95">
+                Solicitar Cotización
+            </button>
+            <button class="bg-surface-container-high text-on-surface rounded-full px-8 py-4 font-bold text-lg hover:bg-surface-container-highest transition-all active:scale-95">
+                Ver Proyectos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Value Proposition Section -->
+    <section class="py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="space-y-4">
+            <div class="text-primary mb-6">
+              <span class="material-symbols-outlined text-4xl" data-icon="location_on" data-weight="fill">location_on</span>
+            </div>
+            <h3 class="text-2xl font-headline font-bold text-on-surface">Experiencia Local</h3>
+            <p class="text-on-surface-variant leading-relaxed">Nacidos en el corazón de Costa Rica, entendemos el clima y las necesidades específicas de nuestras comunidades.</p>
+          </div>
+        <div class="space-y-4">
+          <div class="text-primary mb-6">
+            <span class="material-symbols-outlined text-4xl" data-icon="memory" data-weight="fill">memory</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold text-on-surface">Tecnología Avanzada</h3>
+          <p class="text-on-surface-variant leading-relaxed">Utilizamos paneles de última generación con eficiencia máxima, diseñados para durar décadas en ambientes tropicales.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="text-primary mb-6">
+            <span class="material-symbols-outlined text-4xl" data-icon="eco" data-weight="fill">eco</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold text-on-surface">Impacto Ambiental</h3>
+          <p class="text-on-surface-variant leading-relaxed">Cada instalación reduce significativamente la huella de carbono, protegiendo la biodiversidad de nuestro paraíso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section (Bento Grid) -->
+    <section class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex justify-between items-end mb-16">
+          <div class="max-w-xl">
+            <h2 class="text-4xl font-headline font-extrabold text-on-surface mb-4">Energía Inteligente para Cada Espacio</h2>
+            <p class="text-on-surface-variant">Soluciones personalizadas que se adaptan a tu estilo de vida o escala empresarial.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+          <div class="md:col-span-8 bg-surface-container rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden group">
+            <div class="relative z-10">
+              <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="home" data-weight="fill">home</span>
+              <h3 class="text-3xl font-headline font-bold text-on-surface mb-4">Residencial Premium</h3>
+              <p class="text-on-surface-variant max-w-sm mb-8">Independencia total para tu hogar con sistemas de almacenamiento inteligentes.</p>
+              <a class="inline-flex items-center text-primary font-bold hover:gap-3 transition-all" href="#">Explorar sistemas<span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span></a>
+            </div>
+            <div class="absolute right-0 bottom-0 w-2/3 h-full opacity-20 group-hover:opacity-40 transition-opacity">
+              <img alt="Solar Residencial" class="w-full h-full object-cover rounded-tl-[100px]" data-alt="Sleek modern residential architecture with integrated glass-to-glass solar panels in a minimalist backyard setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67yVNIyB4kcvh4a3WjDE_gdiEklmkqh_Kgs9yggzOGTk_ugpkFAt4cbbpziPnySFLNWcq3DjFRBrZPWIROyWi41lyPyXA2WM-mj-PE65TEJv7FwZ3IU47XDxGNsm_noke3oKiRNwMmVXDIkUisNKIioWQjvaYt-qCj_c5drbq90BT_7T05ghnEiJec9wnbFrV20MUqI7GQi2VRWP4RoQRJw3QVJ16qFKZDR2dcoLrt5SzWEo2mBEIYL6Eh6X4FiZgr5-F-TOy4lE"/>
+            </div>
+        </div>
+        <div class="md:col-span-4 bg-primary text-on-primary rounded-3xl p-10 flex flex-col justify-between">
+          <div>
+            <span class="material-symbols-outlined text-primary-fixed-dim text-5xl mb-6" data-icon="business" data-weight="fill">business</span>
+            <h3 class="text-3xl font-headline font-bold mb-4">Soluciones Industriales</h3>
+            <p class="text-on-primary-container/80 mb-8">Optimización de costos operativos y cumplimiento de metas ESG para grandes empresas.</p>
+          </div>
+          <button class="bg-on-primary text-primary rounded-full py-3 px-6 font-bold self-start">Consultoría Corporativa</button>
+        </div>
+        <div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container rounded-3xl p-8">
+          <span class="material-symbols-outlined text-tertiary-fixed text-4xl mb-4" data-icon="battery_charging_full" data-weight="fill">battery_charging_full</span>
+          <h4 class="text-xl font-headline font-bold mb-2">Respaldo Energético</h4>
+          <p class="text-sm opacity-90">Baterías de litio de alta densidad para nunca quedarte sin luz.</p>
+        </div>
+        <div class="md:col-span-8 bg-surface-container-highest rounded-3xl p-8 flex items-center gap-8">
+          <div class="flex-1">
+            <h4 class="text-xl font-headline font-bold mb-2">Mantenimiento Predictivo</h4>
+            <p class="text-sm text-on-surface-variant">Monitoreo 24/7 mediante nuestra app exclusiva para garantizar el máximo rendimiento.</p>
+          </div>
+          <div class="flex -space-x-4">
+            <div class="w-12 h-12 rounded-full border-4 border-surface bg-zinc-200"></div>
+              <div class="w-12 h-12 rounded-full border-4 border-surface bg-zinc-300"></div>
+              <div class="w-12 h-12 rounded-full border-4 border-surface bg-primary-fixed flex items-center justify-center text-xs font-bold">+500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Impact Statistics Section -->
+    <section class="py-24 bg-surface-container-lowest overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <div>
+    <h2 class="text-4xl font-headline font-extrabold text-on-surface mb-6">Impacto Real en Suelo Nacional</h2>
+    <p class="text-on-surface-variant text-lg mb-12">No solo instalamos paneles, cultivamos un futuro más limpio para las próximas generaciones de costarricenses.</p>
+    <div class="grid grid-cols-2 gap-8">
+    <div class="border-l-4 border-primary pl-6 py-2">
+    <div class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">CO2 AHORRADO</div>
+    <div class="text-4xl font-headline font-extrabold text-primary">12.5k <span class="text-lg">TONS</span></div>
+    </div>
+    <div class="border-l-4 border-secondary pl-6 py-2">
+    <div class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">CLIENTES FELICES</div>
+    <div class="text-4xl font-headline font-extrabold text-secondary">2,840+</div>
+    </div>
+    <div class="border-l-4 border-tertiary pl-6 py-2">
+    <div class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">MW GENERADOS</div>
+    <div class="text-4xl font-headline font-extrabold text-tertiary">45.8</div>
+    </div>
+    <div class="border-l-4 border-primary-container pl-6 py-2">
+    <div class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">ÁRBOLES EQUIV.</div>
+    <div class="text-4xl font-headline font-extrabold text-primary-container">850k</div>
+    </div>
+    </div>
+    </div>
+    <div class="relative h-[500px] rounded-[40px] overflow-hidden rotate-2 scale-95 shadow-2xl">
+    <img alt="Impacto Ambiental" class="w-full h-full object-cover" data-alt="Dramatic wide angle of an array of solar panels in a green valley in Costa Rica with mountains in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgSfdiIKxUOD8ZQ6b0KRUM9RnrKC0y_J-IMxdBKuLCCAJZCom9p_9mW9V3qfaRuAfv0OSxbeMJ3qD4j3fKQNHdmPmU_ddeHqrEooTsjbMuGcwKdpIEkO28_j20K_4tPlDjCB-QlvTkXNXq5XuP4QqbbdeON8S6VwBsgol_bw9Mb2VoYvx8n2iFb6YSDZ7EQ359AymO8pFW7kFsyXv9bte0Ko2LT9ZDd2uJPoQp4IfRSWlZDBrM91UVbZBQ7ezY1H1Kytt7mVVeN6M"/>
+    <div class="absolute inset-0 bg-primary/10"></div>
+    </div>
+    </div>
+    </div>
+    </section>
   </main>
+<!-- Footer -->
+  <footer class="w-full pt-16 pb-8 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+      <div class="space-y-6">
+        <div class="text-lg font-bold text-green-900 dark:text-green-500 font-headline">SolarNova</div>
+        <p class="text-zinc-500 font-body text-sm leading-relaxed">Liderando la revolución energética en Costa Rica con tecnología solar de clase mundial.</p>
+        <div class="flex space-x-4">
+          <span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-primary" data-icon="public">public</span>
+          <span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-primary" data-icon="share">share</span>
+          <span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-primary" data-icon="mail">mail</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-headline font-bold text-green-800 dark:text-green-400 mb-6 uppercase text-xs tracking-widest">Navegación</h4>
+        <ul class="space-y-4 font-body text-sm text-zinc-500">
+          <li><a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Inicio</a></li>
+          <li><a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Servicios</a></li>
+          <li><a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Blog educativo</a></li>
+          <li><a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline font-bold text-green-800 dark:text-green-400 mb-6 uppercase text-xs tracking-widest">Contacto</h4>
+        <ul class="space-y-4 font-body text-sm text-zinc-500">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs" data-icon="call">call</span> +506 4000-0000</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> San José, Costa Rica</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> Lun - Vie: 8am - 6pm</li>
+        </ul>
+      </div>
+    <div>
+      <h4 class="font-headline font-bold text-green-800 dark:text-green-400 mb-6 uppercase text-xs tracking-widest">News Solar</h4>
+      <div class="flex flex-col gap-4">
+        <input class="bg-surface-container-high border-none rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-primary" placeholder="Tu correo" type="email"/>
+        <button class="bg-primary text-on-primary rounded-full py-2 text-sm font-bold">Suscribirse</button>
+      </div>
+    </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-zinc-500 font-body text-sm leading-relaxed">© 2024 SolarNova Costa Rica. Pulsing with clean energy.</p>
+      <div class="flex gap-6 text-xs text-zinc-500 font-body">
+        <a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy &amp; Cookies</a>
+        <a class="hover:underline decoration-secondary opacity-80 hover:opacity-100 transition-opacity" href="#">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Cookie Consent Banner -->
+  <div class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[100]">
+    <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-3xl p-6 shadow-2xl backdrop-blur-xl">
+      <div class="flex items-start gap-4">
+      <div class="bg-tertiary-fixed text-on-tertiary-fixed p-2 rounded-xl">
+        <span class="material-symbols-outlined" data-icon="cookie" data-weight="fill">cookie</span>
+      </div>
+      <div class="flex-1">
+        <h5 class="font-headline font-bold text-on-surface mb-1">Preferencias de Cookies</h5>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Utilizamos cookies para optimizar tu experiencia y analizar el tráfico de energía solar.</p>
+        <div class="flex gap-3">
+          <button class="bg-primary text-on-primary rounded-full px-5 py-2 text-xs font-bold flex-1">Aceptar todo</button>
+          <button class="bg-surface-container-highest text-on-surface rounded-full px-5 py-2 text-xs font-bold">Configurar</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </body>
-
 </html>
