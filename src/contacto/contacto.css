@@ -1,0 +1,80 @@
+/* =========================
+   INTRO
+========================= */
+
+.contact-intro {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px 20px;
+}
+
+.contact-intro h2 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Grupo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #0d631b;
+}
+
+/* Checkbox */
+.checkbox {
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Errores */
+.error {
+  color: #ba1a1a;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Éxito */
+.success {
+  margin-top: 15px;
+  color: green;
+}
+
+/* Botón (usa el global si ya tienes) */
+.btn {
+  background: #0d631b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #094a14;
+}

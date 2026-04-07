@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | SolarNova</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="contacto.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
 <header class="header">
   <nav class="nav" aria-label="Navegación principal">
-    <h1 class="logo">SolarNova</h1>
+    <span class="logo">SolarNova</span>
 
     <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../servicios/servicios.html">Servicios</a></li>
+      <li><a href="../blog/blog.html">Blog</a></li>
+      <li><a href="#" aria-current="page">Contacto</a></li>
     </ul>
   </nav>
 </header>
@@ -28,7 +29,7 @@
 
   <!-- INTRO -->
   <section class="contact-intro">
-    <h2>Contáctanos</h2>
+    <h1>Contáctanos</h1>
     <p>
       ¿Listo para dar el paso hacia energía limpia? Escríbenos y uno de nuestros
       asesores te contactará.
@@ -79,55 +80,7 @@
   <p>© 2026 SolarNova Costa Rica</p>
 </footer>
 
-<script>
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let valid = true;
-
-  const nombre = document.getElementById("nombre");
-  const email = document.getElementById("email");
-  const mensaje = document.getElementById("mensaje");
-  const privacidad = document.getElementById("privacidad");
-
-  const errorNombre = document.getElementById("error-nombre");
-  const errorEmail = document.getElementById("error-email");
-  const errorMensaje = document.getElementById("error-mensaje");
-  const success = document.getElementById("form-success");
-
-  errorNombre.textContent = "";
-  errorEmail.textContent = "";
-  errorMensaje.textContent = "";
-  success.textContent = "";
-
-  if (nombre.value.trim() === "") {
-    errorNombre.textContent = "El nombre es obligatorio";
-    valid = false;
-  }
-
-  if (!email.value.includes("@")) {
-    errorEmail.textContent = "Correo inválido";
-    valid = false;
-  }
-
-  if (mensaje.value.trim() === "") {
-    errorMensaje.textContent = "El mensaje es obligatorio";
-    valid = false;
-  }
-
-  if (!privacidad.checked) {
-    alert("Debes aceptar la política de privacidad");
-    valid = false;
-  }
-
-  if (valid) {
-    success.textContent = "Mensaje enviado correctamente (simulado)";
-    form.reset();
-  }
-});
-</script>
+<script src="contacto.js"></script>
 
 </body>
 </html>
