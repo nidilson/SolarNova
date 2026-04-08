@@ -14,13 +14,13 @@
 
 <header class="header">
   <nav class="nav" aria-label="Navegación principal">
-    <span class="logo">SolarNova</span>
+    <span class="logo" tabindex="0">SolarNova</span>
 
     <ul class="nav-links">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="../servicios/servicios.html">Servicios</a></li>
-      <li><a href="../blog/blog.html">Blog</a></li>
-      <li><a href="#" aria-current="page">Contacto</a></li>
+      <li><a href="../index.html" tabindex="0">Inicio</a></li>
+      <li><a href="../servicios/servicios.html" tabindex="0">Servicios</a></li>
+      <li><a href="../blog/blog.html" tabindex="0">Blog</a></li>
+      <li><a href="#" aria-current="page" tabindex="0">Contacto</a></li>
     </ul>
   </nav>
 </header>
@@ -29,8 +29,8 @@
 
   <!-- INTRO -->
   <section class="contact-intro">
-    <h1>Contáctanos</h1>
-    <p>
+    <h1 tabindex="0">Contáctanos</h1>
+    <p tabindex="0">
       ¿Listo para dar el paso hacia energía limpia? Escríbenos y uno de nuestros
       asesores te contactará.
     </p>
@@ -42,31 +42,31 @@
     <form id="contact-form" novalidate>
       
       <div class="form-group">
-        <label for="nombre">Nombre completo</label>
-        <input id="nombre" name="nombre" type="text" required>
+        <label for="nombre" tabindex="0">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required tabindex="0">
         <span class="error" id="error-nombre"></span>
       </div>
 
       <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input id="email" name="email" type="email" required>
+        <label for="email" tabindex="0">Correo electrónico</label>
+        <input id="email" name="email" type="email" required tabindex="0">
         <span class="error" id="error-email"></span>
       </div>
 
       <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <label for="mensaje" tabindex="0">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required tabindex="0"></textarea>
         <span class="error" id="error-mensaje"></span>
       </div>
 
       <div class="form-group checkbox">
-        <input id="privacidad" type="checkbox" required>
-        <label for="privacidad">
+        <input id="privacidad" type="checkbox" required tabindex="0">
+        <label for="privacidad" tabindex="0">
           Acepto que mis datos sean utilizados únicamente para responder esta solicitud.
         </label>
       </div>
 
-      <button type="submit" class="btn">Enviar mensaje</button>
+      <button type="submit" class="btn" tabindex="0">Enviar mensaje</button>
 
       <p id="form-success" class="success" aria-live="polite"></p>
 
@@ -77,7 +77,7 @@
 </main>
 
 <footer class="footer">
-  <p>© 2026 SolarNova Costa Rica</p>
+  <p tabindex="0">© 2026 SolarNova Costa Rica</p>
 </footer>
 
 <script src="contacto.js"></script>
